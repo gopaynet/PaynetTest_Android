@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorButtonNormal"
+    android:padding="5dp"
+    tools:context="com.amiyon.paynet_test.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/paynet_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Paynet Settings"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/paynet_secret_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Paynet Secret Kay"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/paynet_mid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paynet_secret_key"
+                    android:layout_marginTop="27dp"
+                    android:ems="10"
+                    android:hint="Gopaynet MID"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payment_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Customer Info"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/payment_info"
+                    android:layout_marginTop="27dp"
+                    android:ems="10"
+                    android:hint="Customer Name"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/customer_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/customer_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="23dp"
+                    android:ems="10"
+                    android:hint="Emal address"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/customer_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/customer_email"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Phone number"
+                    android:inputType="number"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payment_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Payment Info"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/invoice_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Invoice number"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/invoice_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paynet_secret_key"
+                    android:layout_marginTop="27dp"
+                    android:ems="10"
+                    android:hint="Total amount"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/paynet_response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Paynet Response"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/text_response"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:text="" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="51dp"
+                android:background="@android:color/holo_green_dark"
+                android:onClick="submit"
+                android:text="PAYNOW" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

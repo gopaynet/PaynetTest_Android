@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Paynet Test</string>
+    <string name="payment_completed">Payment Completed</string>
+</resources>
